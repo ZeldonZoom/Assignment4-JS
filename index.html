@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space & Location Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Space & Location Dashboard</h1>
+        <p class="description">Welcome to the Space & Location Dashboard! This website combines the power of the NASA API and the IP Geolocation API to provide you with an exciting view of space through the Astronomy Picture of the Day and information about your current location. Explore the wonders of the universe and learn more about your place on Earth!</p>
+        <div id="location"></div>
+        <div id="nasa-apod">
+            <img id="apod-image" src="" alt="NASA Picture of the Day">
+            <p id="apod-description"></p>
+        </div>
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <h3>Connecting to NASA API</h3>
+            <p>We connect to the NASA API to fetch the Astronomy Picture of the Day (APOD). This API provides daily images and information related to space and astronomy.</p>
+            <p>JavaScript code used:</p>
+            <code>fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')</code>
+            <p><a href="https://api.nasa.gov/" target="_blank">NASA API Documentation</a></p>
+            
+            <h3>Connecting to IP Geolocation API</h3>
+            <p>We connect to the IP Geolocation API to fetch the user's location based on their IP address. This API provides geographical information such as city and country based on the user's IP.</p>
+            <p>JavaScript code used:</p>
+            <code>fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${ipGeoApiKey}`)</code>
+            <p><a href="https://ipgeolocation.io/documentation.html" target="_blank">IP Geolocation API Documentation</a></p>
+            
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
